@@ -4,20 +4,21 @@ FROM alpine@sha256:d6bfc3baf615dc9618209a8d607ba2a8103d9c8a405b3bd8741d88b4bef36
 
 RUN apk add --no-cache \
     php7 \
-    php7-openssl \
-    php7-mbstring \
-    php7-tokenizer \
-    php7-json \
+    php7-ctype \
+    php7-curl \
+    php7-dom \
+    php7-fileinfo \
     php7-gd \
     php7-imagick \
-    php7-fileinfo \
-    # Needed by composer
-    php7-curl \
+    php7-json \
+    php7-mbstring \
+    php7-openssl \
+    php7-pdo \
     php7-phar \
-    php7-dom \
-    php7-zip \
+    php7-tokenizer \
     php7-xml \
     php7-xmlwriter \
+    php7-zip \
     unzip \
     wget
 
