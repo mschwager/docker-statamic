@@ -1,2 +1,5 @@
 # Vim swap files
 *.sw[po]
+
+# Unzipped statamic directory
+statamic
