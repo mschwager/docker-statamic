@@ -39,4 +39,4 @@ WORKDIR /tmp/statamic/
 EXPOSE 3000
 
 ENTRYPOINT ["/usr/bin/php"]
-CMD ["-S", "0.0.0.0:3000", "statamic/server.php"]
+CMD ["-d", "memory_limit=512M", "-S", "0.0.0.0:3000", "statamic/server.php"]
