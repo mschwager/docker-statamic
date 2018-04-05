@@ -33,7 +33,8 @@ ENV STATAMIC_VERSION 2.8.10
 ENV STATAMIC_CHECKSUM be546b067c84b42efd8865f7169050a3cec07d3aabaa1f4c9dfa837bae60182f
 RUN wget -q https://outpost.statamic.com/v2/get/$STATAMIC_VERSION -O statamic-$STATAMIC_VERSION.zip && \
     echo "$STATAMIC_CHECKSUM  statamic-$STATAMIC_VERSION.zip" | sha256sum -c - && \
-    unzip -q statamic-$STATAMIC_VERSION.zip -d /tmp/
+    unzip -q statamic-$STATAMIC_VERSION.zip -d /tmp/ && \
+    rm statamic-$STATAMIC_VERSION.zip
 
 WORKDIR /tmp/statamic/
 EXPOSE 3000
